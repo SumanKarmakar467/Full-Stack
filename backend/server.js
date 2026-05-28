@@ -24,7 +24,7 @@ app.get('/',(req, res) => {
     res.json({msg: 'Welcome to our application'});
 })
 
-app.use('/api/workouts/',workoutRoutes)
+app.use('/api/workouts',workoutRoutes)
 app.use('/admin',workoutRoutes)
 
 
