@@ -42,4 +42,12 @@ workoutController.js - for the functionality of API called and store in data bas
 
 ## Frontend
 
-# npm create vite@latest 
+# npm create-react-app frontend  
+for react 
+
+# npm i react-router-dom 
+routes
+
+# npm start
+run the frontend
+
