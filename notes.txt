@@ -1,16 +1,26 @@
 ## Frontend 
     we do not use <a></a> tag we use <Link> but you inspect you see the link tag convert into <a></a> tag
 
-    the workflow is 
+    the workflow is:- 
 
-                index.js 
-                    ⬇️
-            (APP) App.js 
-                    ⬇️
-        Navbar.js       Home.js
-        (components)    (pages)
+                                             index.js 
+                                                 ⬇️
+                                            (APP) App.js 
+                                                 ⬇️
+                    Navbar.js  , WorkoutDetails.js        Home.js
+                        (components)                      (pages)
 
 
 
 # For CORS problem you have to do this in package.json 
     "proxy":"http://localhost:4000"
+
+
+## Backend 
+    server.js - gets the post number in .env file useing dotenv
+    ⬇️
+    Routes (workout.js) - for the api calls 
+    ⬇️
+    Controllers(workoutController.js) - how the api calls work 
+
+    models (workoutModel.js) - for mongoDB using mongoose to creae schema and store the data into this 
