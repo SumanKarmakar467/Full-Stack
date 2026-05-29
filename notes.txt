@@ -1,5 +1,5 @@
 ## Frontend 
-    we do not use <a></a> tag we use <Link> but you inspect you see the link tag convert into <a></a> tag
+    we do not use <a></a> tag we use <Link> but you inspect you see the link tag convert into <a></a> tags
 
     the workflow is:- 
 
@@ -7,8 +7,8 @@
                                                  ⬇️
                                             (APP) App.js 
                                                  ⬇️
-                    Navbar.js  , WorkoutDetails.js        Home.js
-                        (components)                      (pages)
+                    Navbar.js  , WorkoutDetails.js ,WorkoutForm.js      Home.js
+                        (components)                                    (pages)
 
 
 
