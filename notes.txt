@@ -1,0 +1,16 @@
+## Frontend 
+    we do not use <a></a> tag we use <Link> but you inspect you see the link tag convert into <a></a> tag
+
+    the workflow is 
+
+                index.js 
+                    ⬇️
+            (APP) App.js 
+                    ⬇️
+        Navbar.js       Home.js
+        (components)    (pages)
+
+
+
+# For CORS problem you have to do this in package.json 
+    "proxy":"http://localhost:4000"
