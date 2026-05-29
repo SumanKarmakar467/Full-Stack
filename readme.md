@@ -3,12 +3,12 @@ E: ExpressJS (Backend)
 R: ReactJS (Frontend)
 N: NodeJS (Backend)
 
-##  Frontend (Browser/ Client)                      Backend (Server)                 DB
+# Frontend (Browser/ Client)                      Backend (Server)                 DB
 
     React APP                                         Express + Node                MongoDB
 
 
-Backend:
+## Backend:
 # npm init -y
 # npm i express/ npm install express (run backend - node server.js)
 
@@ -38,3 +38,8 @@ server.js - for the backend core
 workout.js - for the workout API creating 
 workoutMode.js - for database schema
 workoutController.js - for the functionality of API called and store in data base
+
+
+## Frontend
+
+# npm create vite@latest 
