@@ -31,3 +31,10 @@ POST    /workouts               --> Create a new workout doc
 GET     /workouts/:id           --> Get a single workout doc
 DELETE  /workouts/:id           --> Deletes a single workout doc
 PATCH   /workouts/:id           --> update a single workout
+
+
+# 
+server.js - for the backend core
+workout.js - for the workout API creating 
+workoutMode.js - for database schema
+workoutController.js - for the functionality of API called and store in data base

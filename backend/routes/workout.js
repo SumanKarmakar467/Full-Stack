@@ -2,7 +2,13 @@
 const express = require('express')
 const Workout = require('../models/workoutModel');
 const router = express.Router();
-
+const {
+    getWorkouts,
+    getWorkout,
+    createWorkout,
+    deleteWorkout,
+    updateWorkout
+} = require('../controllers/workoutController');
 /**
  * Route: /admin
  * Method: GET
@@ -10,7 +16,7 @@ const router = express.Router();
  * Access: Public 
  * Parameters: None
  */
-router.get('/',(req, res) => {
+router.get('/admin',(req, res) => {
     res.json({
         msg: 'GET the admin panel'
     })
@@ -24,11 +30,7 @@ router.get('/',(req, res) => {
  * Access: Public 
  * Parameters: None
  */
-router.get('/',(req, res) => {
-    res.json({
-        msg: 'GET all workouts'
-    })
-})
+router.get('/',getWorkouts)
 
 
 /**
@@ -38,11 +40,7 @@ router.get('/',(req, res) => {
  * Access: Public 
  * Parameters: id
  */
-router.get('/:id',(req, res) => {
-    res.json({
-        msg: 'GET a single workout by its ID'
-    })
-})
+router.get('/:id',getWorkout)
 
 
 
@@ -53,16 +51,7 @@ router.get('/:id',(req, res) => {
  * Access: Public 
  * Parameters: None
  */
-router.post('/',async(req, res) => {
-    const {title, load, reps} = req.body;
-    try{
-        const workout = await Workout.create( {title, load, reps} )
-        res.status(200).json(workout)
-    }
-    catch(error){
-        res.status(400).json({error: error.message})
-    }
-})
+router.post('/',createWorkout)
 
 
 
@@ -73,11 +62,7 @@ router.post('/',async(req, res) => {
  * Access: Public 
  * Parameters: id
  */
-router.delete('/:id',(req, res) => {
-    res.json({
-        msg: 'Delete a workout'
-    })
-})
+router.delete('/:id',deleteWorkout)
 
 
 /**
@@ -87,9 +72,7 @@ router.delete('/:id',(req, res) => {
  * Access: Public 
  * Parameters: id
  */
-router.patch('/:id',(req, res) => {
-    res.json({
-        msg: 'Patch a workout'
-    })
-})
+router.patch('/:id',updateWorkout)
+
+
 module.exports = router;
