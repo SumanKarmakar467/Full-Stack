@@ -51,3 +51,6 @@ routes
 # npm start
 run the frontend
 
+# npm install date-fns 
+for the date show in good format
+
