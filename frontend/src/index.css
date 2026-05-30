@@ -67,7 +67,16 @@ header a{
   background-color: #f1f1f1;
   padding:8px;
   border-radius:50%;
-  color:#333;
+  /* color:#333; */
+}
+.material-symbols-outlined{
+  color: var(--primary);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.material-symbols-outlined:hover{
+  color: var(--error);
+  transform: scale(1.1);
 }
 label, input{
   display:block;
