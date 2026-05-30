@@ -1,3 +1,6 @@
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first');
+
 // Importing express package
 const express=require('express');
 // Importing dotenv
@@ -27,7 +30,7 @@ app.get('/',(req, res) => {
 app.use('/api/workouts',workoutRoutes)
 app.use('/admin',workoutRoutes)
 
-
+console.log("Mongo URL:", process.env.MONGO_URL);
 // Connect to Database
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
