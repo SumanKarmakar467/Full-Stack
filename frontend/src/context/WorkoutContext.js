@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react';
+const { createContext, useReducer }= require('react');
 
 export const WorkoutContext = createContext();
 
