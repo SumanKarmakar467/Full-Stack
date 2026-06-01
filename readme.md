@@ -22,6 +22,8 @@ N: NodeJS (Backend)
 
 ## Running :- npm run dev 
 
+#  npm i bcrypt :- for encrypting the password
+
 
 
 
