@@ -122,3 +122,31 @@ div.error{
   border-radius:4px;
   margin:20px 0;
 }
+
+/* Log in & Sirn Up */
+
+nav{
+  display: flex;
+  align-items: center;
+}
+nav a{
+  margin-left: 10px;
+}
+form.signup, form.login{
+  max-width:400px;
+  margin:40px auto;
+  background-color: #fff;
+  padding:25px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border:2px solid var(--primary)
+}
+form h4{
+  font-size: 1.5rem;
+  color:var(--primary);
+  text-decoration: underline;
+}
+form button{
+  padding:10px;
+  margin-left: 150px;
+}
