@@ -3,10 +3,14 @@ dns.setDefaultResultOrder('ipv4first');
 
 // Importing express package
 const express=require('express');
+
 // Importing dotenv
 const dotenv = require('dotenv');
-// importing the routes workout.js file 
+
+// importing the routes 
 const workoutRoutes= require('./routes/workout');
+const userRoutes = require('./routes/user');
+
 // importing mongoose
 const mongoose = require('mongoose');
 
@@ -28,6 +32,7 @@ app.get('/',(req, res) => {
 })
 
 app.use('/api/workouts',workoutRoutes)
+app.use('/api/user',userRoutes)
 app.use('/admin',workoutRoutes)
 
 console.log("Mongo URL:", process.env.MONGO_URL);
