@@ -26,6 +26,7 @@ N: NodeJS (Backend)
 
 # npm i validator :- for validate the email & the password
 
+# npm i jsonwebtoken :- for JWT authentication 
 
 
 
