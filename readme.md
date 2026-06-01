@@ -24,6 +24,8 @@ N: NodeJS (Backend)
 
 #  npm i bcrypt :- for encrypting the password
 
+# npm i validator :- for validate the email & the password
+
 
 
 
