@@ -5,7 +5,10 @@ const mongoose = require('mongoose');
 
 // Get all workouts
 exports.getWorkouts= async(req, res) => {
-    const workouts = await Workout.find({}).sort({createdAt: -1})
+
+    const user_id= req.user._id
+
+    const workouts = await Workout.find({user_id}).sort({createdAt: -1})
 
     if(!workouts){
         return res.status(400).json({error: "No entries found"})
@@ -33,6 +36,7 @@ exports.getWorkout= async(req, res) => {
 
 // Create a new workout
 exports.createWorkout = async(req, res) => {
+
     const {title, load, reps} = req.body;
 
     let emptyFields =[];
@@ -49,9 +53,11 @@ exports.createWorkout = async(req, res) => {
     if(emptyFields.length > 0){
         return res.status(400).json({error: 'Please fill out all fields!',emptyFields})
     }
+
     // add doc to DataBase
     try{
-        const workout = await Workout.create( {title, load, reps} )
+        const user_id = req.user_id
+        const workout = await Workout.create( {title, load, reps, user_id} )
         res.status(200).json(workout)
     }
     catch(error){
