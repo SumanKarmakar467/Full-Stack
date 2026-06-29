@@ -56,7 +56,7 @@ exports.createWorkout = async(req, res) => {
 
     // add doc to DataBase
     try{
-        const user_id = req.user_id
+        const user_id = req.ser_id
         const workout = await Workout.create( {title, load, reps, user_id} )
         res.status(200).json(workout)
     }
