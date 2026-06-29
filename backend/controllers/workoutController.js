@@ -50,7 +50,7 @@ exports.createWorkout = async(req, res) => {
         emptyFields.push('reps')
     }
 
-    if(emptyFields.lenth > 0){
+    if(emptyFields.length > 0){
         return res.status(400).json({error: 'Please fill out all fields!',emptyFields})
     }
 
