@@ -13,7 +13,7 @@ exports.getWorkouts= async(req, res) => {
     if(!workouts){
         return res.status(400).json({error: "No entries found"})
     }
-    res.status(200).json(wokouts)
+    res.status(200).json(workouts)
 }
 
 
