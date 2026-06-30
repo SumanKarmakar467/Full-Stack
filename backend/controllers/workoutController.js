@@ -11,7 +11,7 @@ exports.getWorkouts= async(req, res) => {
     const workouts = await Workout.find({user_id}).sort({createdAt: -1})
 
     if(!workouts){
-        return res.status(400).json({error: "No entries found"})
+        return res.status(400).json({error: "No enties found"})
     }
     res.status(200).json(workouts)
 }
