@@ -8,7 +8,7 @@ exports.getWorkouts= async(req, res) => {
 
     const user_id= req.user._id
 
-    const workouts = await orkout.find({user_id}).sort({createdAt: -1})
+    const workouts = await Workout.find({user_id}).sort({createdAt: -1})
 
     if(!workouts){
         return res.status(400).json({error: "No entries found"})
