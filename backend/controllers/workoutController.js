@@ -25,7 +25,7 @@ exports.getWorkout= async(req, res) => {
         return res.status(404).json({error: "No such workout"})
     }
     // const workout = await Workout.find({_id:id})
-    const workout = await Workout.findById(id);
+    const workout = await Wokout.findById(id);
     if(!workout){
         return res.status(404).json({error: "No such workout"})
     }
